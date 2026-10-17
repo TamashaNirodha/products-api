@@ -21,9 +21,30 @@ public class Product {
         this.name = name;
         this.price = price;
     }
-    // Getters: Required for serialization.
-    // Jackson looks for public 'get<FieldName>()' methods to read private field values for JSON responses.
-    public Long getId() { return id; }
-    public String getName() { return name; }
-    public double getPrice() { return price; }
+    // ID
+    public Long getId() {
+
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    // Name
+    public String getName() {
+
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Price
+    public double getPrice() {
+
+        return price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }

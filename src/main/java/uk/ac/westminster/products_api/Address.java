@@ -13,7 +13,15 @@ public class Address {
         this.postcode = postcode;
     }
 
-    public String getStreet() { return street; }
-    public String getCity() { return city; }
-    public String getPostcode() { return postcode; }
+    public String getStreet() {
+        return street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
 }
