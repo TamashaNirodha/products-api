@@ -29,9 +29,10 @@ public class ProductController {
 
     // POST /products - Creates a new product from incoming JSON request body
     @PostMapping
-    public Product addProduct(@RequestBody Product product) {
+    public Product addProduct(@RequestBody DigitalProduct product) {
         return productService.addProduct(product);
     }
+    // This is a temporary fix
 
     // DELETE /products/{id} - Removes a product by its ID
     @DeleteMapping("/{id}")
@@ -43,5 +44,10 @@ public class ProductController {
     @GetMapping("/search")
     public List<Product> search(@RequestParam String name) {
         return productService.findByName(name);
+    }
+
+    @GetMapping("/products/summaries")
+    public List<String> getSummaries() {
+        return productService.getAllSummaries();
     }
 }
